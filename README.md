@@ -1,6 +1,6 @@
 # Quora Insincere Question Classification
 
-![Quora Logo](https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Quora_logo_2015.svg/250px-Quora_logo_2015.svg.png)
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Quora_logo_2015.svg/250px-Quora_logo_2015.svg.png" alt="Quora Logo">
 
 ## Contents
 - [Project Overview](#project-overview)
@@ -96,19 +96,19 @@ model. The architecture includes:
 
 ### Training Loss
 
-![Training Loss](./Results/Train%20Loss.png)
+<img src="./Results/Train%20Loss.png" width="400" height="300" alt="Training Loss">
 
 ### F1 Score on Val Set During Training
 
-![F1 Score Evolution](./Results/F1%20Score%20on%20Val%20set.png)
+<img src="./Results/F1%20Score%20on%20Val%20set.png" width="400" height="300" alt="F1 Score Evolution">
 
 ### Threshold of obtaining Best F1 Score
 
-![Threshold](./Results/Threshold%20of%20Obtaining%20best%20F1%20Score.png)
+<img src="./Results/Threshold%20of%20Obtaining%20best%20F1%20Score.png" width="400" height="300" alt="Threshold">
 
 ### Validation Loss
 
-![Validation Loss](./Results/Validation%20Loss.png)
+<img src="./Results/Validation%20Loss.png" width="400" height="300" alt="Validation Loss">
 
 ### Wandb Dashboard Link
 [Dashboard_Link](https://wandb.ai/shobhitshukla6535-iit-kharagpur/question-classification/workspace?nw=nwusershobhitshukla6535)
@@ -163,12 +163,3 @@ python main.py --mode inference --data_path test.csv
 ## Future Improvements
 
 - Experiment with ensemble methods combining multiple pre-trained language models
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## Acknowledgments
-
-- Kaggle and Quora for providing the dataset and competition platform
-- Hugging Face for the transformers library
