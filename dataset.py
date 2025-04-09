@@ -58,12 +58,10 @@ def prepare_dataloaders(config):
     
     tokenizer = AutoTokenizer.from_pretrained(config["model_card"], use_fast=True)
     
-    # Use configured max_length or calculate it
     max_length = config.get("max_length") 
     if not max_length and config.get("length_percentile"):
         max_length = get_max_length(df_train, tokenizer, config["length_percentile"])
     
-    # Split the data
     train_df, val_df = train_test_split(
         df_train,
         stratify=df_train.target,
@@ -71,7 +69,6 @@ def prepare_dataloaders(config):
         random_state=config["seed"],
     )
 
-    # Create datasets
     train_ds = QuestionsDataset(
         train_df, tokenizer, is_test=False, max_length=max_length
     )
@@ -79,7 +76,6 @@ def prepare_dataloaders(config):
         val_df, tokenizer, is_test=False, max_length=max_length
     )
 
-    # Create dataloaders
     train_dl = DataLoader(train_ds, batch_size=config["batch_size"], shuffle=True)
     val_dl = DataLoader(val_ds, batch_size=config["batch_size"])
     
