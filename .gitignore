@@ -2,3 +2,6 @@
 /wandb
 /checkpoints
 /.vscode
+Dataset/sample_submission.csv
+Dataset/test.csv
+Dataset/train.csv
