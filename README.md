@@ -19,8 +19,6 @@
   - [Training](#training)
   - [Inference](#inference)
 - [Future Improvements](#future-improvements)
-- [License](#license)
-- [Acknowledgments](#acknowledgments)
 
 ## Project Overview
 
