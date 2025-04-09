@@ -128,9 +128,6 @@ python main.py --mode inference --data_path test.csv
 ## Future Improvements
 
 - Experiment with ensemble methods combining multiple pre-trained language models
-- Implement more advanced data augmentation techniques
-- Explore additional features such as question metadata
-- Test different threshold optimization strategies for F1 score maximization
 
 ## License
 
