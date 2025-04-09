@@ -2,13 +2,41 @@
 
 ![Quora Logo](https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Quora_logo_2015.svg/250px-Quora_logo_2015.svg.png)
 
+## Contents
+- [Project Overview](#project-overview)
+  - [The Problem](#the-problem)
+- [Dataset](#dataset)
+  - [Data Description](#data-description)
+- [Solution Approach](#solution-approach)
+  - [Model Architecture](#model-architecture)
+  - [Training Process](#training-process)
+- [Performance](#performance)
+- [Training Visualization](#training-visualization)
+- [Implementation Details](#implementation-details)
+  - [Key Technical Challenges](#key-technical-challenges)
+- [Running the Project](#running-the-project)
+  - [Requirements](#requirements)
+  - [Training](#training)
+  - [Inference](#inference)
+- [Future Improvements](#future-improvements)
+- [License](#license)
+- [Acknowledgments](#acknowledgments)
+
 ## Project Overview
 
-This repository contains my solution for the Kaggle competition [Quora Insincere Questions Classification](https://www.kaggle.com/c/quora-insincere-questions-classification). The challenge focuses on identifying and filtering out toxic and misleading questions from the Quora platform.
+This repository contains my solution for the Kaggle 
+competition [Quora Insincere Questions Classification](https://www.kaggle.com/c/quora-insincere-questions-classification). 
+The challenge focuses on identifying and filtering out 
+toxic and misleading questions from the Quora platform.
 
 ### The Problem
 
-Quora is a platform that empowers people to learn from each other through asking questions and connecting with others who provide unique insights. A significant challenge for the platform is to filter out "insincere" questions—those founded upon false premises or intended to make statements rather than seek genuine answers.
+Quora is a platform that empowers people to learn from 
+each other through asking questions and connecting with 
+others who provide unique insights. A significant challenge 
+for the platform is to filter out "insincere" questions—those 
+founded upon false premises or intended to make statements 
+rather than seek genuine answers.
 
 An insincere question may have these characteristics:
 
@@ -24,7 +52,8 @@ An insincere question may have these characteristics:
 
 ## Dataset
 
-The dataset consists of over 1.3 million questions with binary labels indicating whether a question is sincere (0) or insincere (1).
+The dataset consists of over 1.3 million questions with binary 
+labels indicating whether a question is sincere (0) or insincere (1).
 
 ### Data Description:
 
@@ -39,7 +68,9 @@ The dataset consists of over 1.3 million questions with binary labels indicating
 
 ### Model Architecture
 
-I implemented a deep learning approach using PyTorch with fine-tuned RoBERTa (FacebookAI/roberta-base) as the base model. The architecture includes:
+I implemented a deep learning approach using PyTorch with 
+fine-tuned RoBERTa (FacebookAI/roberta-base) as the base 
+model. The architecture includes:
 
 - RoBERTa pre-trained language model for feature extraction
 - A custom classification head with dropout for regularization
@@ -95,9 +126,13 @@ The model implementation is divided into several modules:
 
 ### Key Technical Challenges
 
-1. **Handling Class Imbalance**: Implemented weighted loss functions to address the imbalance between sincere and insincere questions.
-2. **Exploding Gradients**: Identified and mitigated exploding gradients during training with gradient clipping (max norm of 5000).
-3. **Optimization**: Dynamic learning rate scheduling to improve model convergence and performance.
+1. **Handling Class Imbalance**: Implemented weighted loss 
+   functions to address the imbalance between sincere and 
+   insincere questions.
+2. **Exploding Gradients**: Identified and mitigated exploding 
+   gradients during training with gradient clipping (max norm of 5000).
+3. **Optimization**: Dynamic learning rate scheduling to improve 
+   model convergence and performance.
 
 ## Running the Project
 
