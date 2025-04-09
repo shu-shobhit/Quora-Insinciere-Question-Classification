@@ -1,3 +1,4 @@
+import torch
 train_config = {
     "dataset_path": "/kaggle/input/quora-insincere-questions-classification/train.csv",
     "model_card": "FacebookAI/roberta-base",
